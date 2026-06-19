@@ -226,6 +226,14 @@ class MBGW_Magazine_Grid_Widget extends \Elementor\Widget_Base {
             ]
         );
 
+             $this->add_group_control(
+                \Elementor\Group_Control_Text_Shadow::get_type(),
+                [
+                    'name' => 'title_text_shadow',
+                    'selector' => '{{WRAPPER}} .mag-card h2, {{WRAPPER}} .mag-card h3',
+                ]
+            );
+
         $this->end_controls_section();
 
         /*
@@ -266,6 +274,14 @@ class MBGW_Magazine_Grid_Widget extends \Elementor\Widget_Base {
             ]
         );
 
+            $this->add_group_control(
+                \Elementor\Group_Control_Text_Shadow::get_type(),
+                [
+                    'name' => 'date_text_shadow',
+                    'selector' => '{{WRAPPER}} .post-date',
+                ]
+            );
+    
         $this->end_controls_section();
 
             /*
@@ -450,9 +466,10 @@ class MBGW_Magazine_Grid_Widget extends \Elementor\Widget_Base {
                         'margin: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                 ],
             ]
-        );
+        );  
 
-        $this->end_controls_section();
+         $this->end_controls_section();
+
     }
     protected function render() {
 
